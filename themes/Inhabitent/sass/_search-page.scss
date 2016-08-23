@@ -1,0 +1,66 @@
+
+/* Search Page */
+
+.search-whole-page {
+  display: flex;
+}
+
+.search {
+  .page-title {
+    font-size: 2.25rem;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 20px;
+  }
+  .site-main{
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    &:visited {
+      color: $color__link;
+      &:hover {
+        color: $color__link-visited;
+      }
+    }
+  } // a
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .search-form {
+    fieldset {
+      border:0;
+      }
+  } // .search-form
+  .entry-title {
+    position: relative;
+    background: none;
+    padding: 0;
+    max-width: 100%;
+  }
+  .entry-meta {
+    background: none;
+    color: black;
+    position: relative;
+    padding: 0;
+  } // .entry-meta
+  .readmore {
+    margin-bottom: 30px;
+  }
+  .moretag {
+    color: black;
+    &:visited {
+      color: black;
+    }
+    &:hover {
+      color: white;
+      &:visited {
+        color: white;
+      }
+    }
+  } // .moretag
+  .page-content {
+    padding-top: 10px;
+  }
+} // .search

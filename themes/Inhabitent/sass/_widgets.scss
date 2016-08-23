@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget {
+	margin: 0 0 $base__space-unit;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+/* Contact Info */
+.textwidget {
+	p {
+		display: flex;
+	}
+	i {
+		margin-right: 10px;
+		line-height: 1.8rem;
+		width: 20px;
+	}
+}
+
+/* Business hours */
+.inhabitent-hours-class {
+	p {
+		font-size: .9rem;
+	}
+}
+
+/* Archive */
+.widget_archive {
+	ul {
+		padding-left: 0;
+		margin-left: 0;
+		list-style: none;
+	}
+}

@@ -1,0 +1,28 @@
+/* About Page */
+
+.about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  h2 {
+    color: white;
+    font-size: 3rem;
+  }
+}
+.about-container {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  .about-paragraphs {
+    max-width: 800px;
+    margin: 3rem auto;
+    text-indent: 50px;
+  }
+  .about-title {
+    text-align: center;
+    font-size: 2rem;
+    color: $color__link-visited;
+  }
+}
