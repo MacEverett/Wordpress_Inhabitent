@@ -16,19 +16,33 @@ get_header(); ?>
 				</section><!-- .home-hero -->
 
 				<!-- Shop Stuff -->
-				<h2>Shop Stuff</h2>
-					<section class="shop-stuff">
-						<?php $terms = get_terms('product-type')?>
-							<?php foreach ( $terms as $product_type) : ?>
-							<div class="product-block">
-								<img src="<?php echo get_template_directory_uri() ?>/images/logos/<?php echo $product_type->slug ?>.svg" alt="product-type" />
-								<p class="description"><?php echo $product_type->description ?></p>
-								<a href="<?php echo get_term_link($product_type, 'product-type') ?>/" class="button"><?php echo $product_type->slug ?> Stuff</a>
+				<main id="main" class="wrapper site-main" role="main">
+		   <section class="shop-stuff">
+		     <h1>Shop Stuff</h1>
+		     <div class="shop-categories">
 
-						</div>
-					<?php endforeach; ?>
+		       <?php
+		       $category_arr = array(
+		         'taxonomy' => 'product-types',
+		         'order' => 'ASC',
+		         'orderby' => 'name',
+		         'hide_empty' => true);
+		         $shop_categories = get_terms($category_arr); ?>
 
-					</section>
+		         <?php foreach ( $shop_categories as $tag ): ?>
+		           <div class="each-category">
+		             <img src="<?php echo get_template_directory_uri().'/images/logos'.$tag->slug.'.svg'; ?>" alt = " "/>
+
+		             <p><?php echo $tag->description; ?></p>
+		             <div class="stuff">
+		               <a href="<?php echo get_category_link($tag); ?>">
+		                 <?php echo $tag->name.' stuff'; ?></a>
+		               </div>
+		             </div>
+
+		           <?php endforeach; ?>
+		         </div>
+		       </section>
 
 
 		<!-- Inhabitent Journal -->

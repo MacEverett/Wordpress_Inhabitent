@@ -24,18 +24,19 @@
 				<div class="header-bar container">
 					<div class="site-branding">
 						<div class="tent-logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1 class="site-title">Inhabitent</h1></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1 class="site-title"></h1></a>
 						</div>
 					</div><!-- .site-branding -->
 
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						<i class="fa fa-search"></i>
-						<div class="nav-search">
-							<?php get_search_form(); ?>
-						</div>
-					</nav><!-- #site-navigation -->
+					<nav id="site-navigation" class="main-navigation" role="navigation"><div class="tent-logo">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"/>
+		<h1>Inhabitent</h1>
+		</a>
+	</div>
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<?php get_search_form(); ?>
+	</nav><!-- #site-navigation -->
 
 				</div><!-- .header-bar -->
 			</header><!-- #masthead -->

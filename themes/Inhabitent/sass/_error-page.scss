@@ -1,28 +1,24 @@
-/* Error 404 Page */
-
-.error-whole-page {
-  display: flex;
-}
-.error-404 .error-content{
+/*-----------------------------------------------------------
+# Error 404 Page
+-------------------------------------------------------------*/
+.content-area {
   display: flex;
   flex-direction: column;
-  width: 73%;
-  a {
-    &:visited {
-      color: $color__link;
-      &:hover {
-        color: $color__link-visited;
-      }
-    }
-  }
-  ul {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-  }
 }
-.search-form {
-  fieldset {
-    border:0;
+
+.error404 .content-area{
+  margin-bottom: 2rem;
+
+  ul {
+    padding: 0;
+    line-height: 1.75;
+  }
+
+
+  h2 {
+    @include font-uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding-top: 20px;
   }
 }

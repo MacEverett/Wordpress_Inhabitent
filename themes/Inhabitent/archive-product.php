@@ -1,50 +1,49 @@
 <?php
 /**
- * The template for displaying archive product pages.
+ * The template for displaying archive pages.
  *
- * @package inhabitent_Theme
+ * @package Inhabitent_Theme
  */
 get_header(); ?>
-<div class="page-content">
 
-	<div id="primary" class="product-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+  <main id="main" class="wrapper site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) : ?>
 
-			<header class="product-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
+    <?php
+      $arr = array(
+        'taxonomy' => 'product-type');
+      $categories = get_terms($arr); ?>
 
-				<ul class="product-links">
-					<?php $terms = get_terms('product-type')?>
-						<?php foreach ( $terms as $product_type) : ?>
-							<li>
-								<a href="<?php echo get_term_link($product_type, 'product-type') ?>/"><?php echo $product_type->slug ?></a>
-							</li>
-					<?php endforeach; ?>
-				</ul>
-			</header><!-- .product-header -->
+      <header class="page-header">
+       <h1>Shop Stuff</h1>
+    <?php foreach ( $categories as $category) : ?>
 
-			<div class="product-grid">
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+        <ul class="shop-nav">
+          <li><a href="<?php echo get_category_link($category); ?>">
+        <?php echo $category->name; ?></a></li>
+          <?php endforeach; ?>
+        </ul>
+      <!-- </div> -->
+    </header><!-- .page-header -->
 
-						<?php
-							get_template_part( 'template-parts/content', 'product' );
-						?>
+    <?php /* Start the Loop */ ?>
+    <div class="products-grid">
+    <?php while ( have_posts() ) : the_post(); ?>
 
-					<?php endwhile; ?>
+      <?php
+      get_template_part( 'template-parts/content-archive-products' );
+      ?>
 
-				<?php else : ?>
+    <?php endwhile; ?>
 
-					<?php get_template_part( 'template-parts/content', 'none' ); ?>
+  <?php else : ?>
 
-				<?php endif; ?>
+    <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			</div><!-- .product-grid-item -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .page-content -->
+  <?php endif; ?>
+      </div><!--end products-->
+    </main><!-- #main -->
+  </div><!-- #primary -->
+<?php get_footer(); ?>

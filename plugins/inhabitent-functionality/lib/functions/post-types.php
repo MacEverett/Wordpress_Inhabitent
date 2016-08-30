@@ -1,12 +1,5 @@
-
 <?php
-/**
- * POST TYPES
- *
- * @link  http://codex.wordpress.org/Function_Reference/register_post_type
- */
-// Add your custom post types here...
-// Register Custom Post Type
+
 function tent_register_product_cpt() {
 	$labels = array(
 		'name'                  => 'Products',
@@ -54,6 +47,6 @@ function tent_register_product_cpt() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'Product', $args );
+	register_post_type( 'product', $args );
 }
 add_action( 'init', 'tent_register_product_cpt', 0 );

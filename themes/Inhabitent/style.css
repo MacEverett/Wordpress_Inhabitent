@@ -1,7 +1,7 @@
 /*!
-Theme Name: Inhabitent
+Theme Name: RED Starter Theme
 Theme URI: http://underscores.me/
-Author: Mac Everett
+Author: RED Academy
 Author URI: http://www.redacademy.com
 Description: Inhabitent
 Version: 1.0.0
@@ -904,28 +904,155 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
-.site-branding {
-  background-image: url("../../images/inhabitent-logo-tent.svg");
-  background-size: 50px 30px;
-  width: 50px;
-  height: 30px; }
+/* Navigation Bar */
+.home .site-header, .page-template-about .site-header, .single-adventure .site-header {
+  background-color: transparent;
+  border-bottom: 0;
+  text-shadow: 1px 1px 2px #323232;
+  position: absolute; }
+  .home .site-header a, .home .site-header i, .page-template-about .site-header a, .page-template-about .site-header i, .single-adventure .site-header a, .single-adventure .site-header i {
+    color: white;
+    padding: 4px; }
+    .home .site-header a:hover, .home .site-header i:hover, .page-template-about .site-header a:hover, .page-template-about .site-header i:hover, .single-adventure .site-header a:hover, .single-adventure .site-header i:hover {
+      color: #f0e4d1; }
+    .home .site-header a:visited, .home .site-header i:visited, .page-template-about .site-header a:visited, .page-template-about .site-header i:visited, .single-adventure .site-header a:visited, .single-adventure .site-header i:visited {
+      color: white; }
+      .home .site-header a:visited:hover, .home .site-header i:visited:hover, .page-template-about .site-header a:visited:hover, .page-template-about .site-header i:visited:hover, .single-adventure .site-header a:visited:hover, .single-adventure .site-header i:visited:hover {
+        color: #f0e4d1; }
+  .home .site-header input[type=search], .page-template-about .site-header input[type=search], .single-adventure .site-header input[type=search] {
+    color: white; }
+  .home .site-header ::-webkit-input-placeholder, .page-template-about .site-header ::-webkit-input-placeholder, .single-adventure .site-header ::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #f0e4d1; }
+  .home .site-header :-moz-placeholder, .page-template-about .site-header :-moz-placeholder, .single-adventure .site-header :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #f0e4d1; }
+  .home .site-header ::-moz-placeholder, .page-template-about .site-header ::-moz-placeholder, .single-adventure .site-header ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #f0e4d1; }
+  .home .site-header :-ms-input-placeholder, .page-template-about .site-header :-ms-input-placeholder, .single-adventure .site-header :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #f0e4d1; }
 
-.main-navigation {
-  display: block; }
-  .main-navigation ul {
-    list-style: none; }
-
-#primary-menu {
+.site-header {
+  height: 50px;
+  position: fixed;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  margin: 1px 2px 2px 5px; }
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 0 0 150px;
+  z-index: 999;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.74);
+  border-bottom: 1px solid #e1e1e1; }
+  .site-header a, .site-header i {
+    color: #248a83;
+    padding: 4px; }
+    .site-header a:hover, .site-header i:hover {
+      color: #2f1339; }
+    .site-header a:visited, .site-header i:visited {
+      color: #248a83; }
+      .site-header a:visited:hover, .site-header i:visited:hover {
+        color: #2f1339; }
+  .site-header .fa-search {
+    line-height: 1.5;
+    margin-right: 5px;
+    cursor: pointer; }
+  .site-header input[type=search] {
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'novocento', sans-serif;
+    border: 0;
+    outline: none;
+    width: 200px;
+    display: none; }
+  .site-header fieldset {
+    margin: 0;
+    padding: 0; }
 
-li {
-  padding: .66rem; }
+.site-header-fixed {
+  height: 50px;
+  border-bottom: 0;
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 0 0 150px;
+  z-index: 999;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.74);
+  border-bottom: 1px solid #e1e1e1; }
+  .site-header-fixed a, .site-header-fixed i {
+    color: #248a83;
+    padding: 4px; }
+    .site-header-fixed a:hover, .site-header-fixed i:hover {
+      color: #2f1339; }
+    .site-header-fixed a:visited, .site-header-fixed i:visited {
+      color: #248a83; }
+      .site-header-fixed a:visited:hover, .site-header-fixed i:visited:hover {
+        color: #2f1339; }
+  .site-header-fixed .fa-search {
+    line-height: 1.5;
+    margin-right: 5px;
+    cursor: pointer; }
+  .site-header-fixed input[type=search] {
+    background: transparent;
+    color: #f0e4d1;
+    text-transform: uppercase;
+    font-family: 'novocento', sans-serif;
+    border: 0;
+    outline: none;
+    width: 200px;
+    display: none; }
+  .site-header-fixed fieldset {
+    margin: 0;
+    padding: 0; }
+
+.home .site-title, .page-template-about .site-title, .single-adventure .site-title {
+  background: url(../../images/inhabitent-logo-tent-white.svg) no-repeat;
+  background-size: 50px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-indent: 100%;
+  margin: 0;
+  position: absolute;
+  top: 5px;
+  left: 150px; }
+
+.site-title {
+  background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
+  background-size: 50px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-indent: 100%;
+  margin: 0;
+  position: absolute;
+  top: 5px;
+  left: 150px; }
+
+.site-title-fixed {
+  background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
+  background-size: 50px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-indent: 100%;
+  margin: 0;
+  position: absolute;
+  top: 5px;
+  left: 150px; }
+
+.header-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 10px 0 0 20px;
+  margin-bottom: 20px; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -1385,28 +1512,26 @@ input[type=submit] {
     font-size: 2rem;
     color: #2f1339; }
 
-/* Error 404 Page */
-.error-whole-page {
-  display: -ms-flexbox;
-  display: flex; }
-
-.error-404 .error-content {
+/*-----------------------------------------------------------
+# Error 404 Page
+-------------------------------------------------------------*/
+.content-area {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
-  width: 73%; }
-  .error-404 .error-content a:visited {
-    color: #248a83; }
-    .error-404 .error-content a:visited:hover {
-      color: #2f1339; }
-  .error-404 .error-content ul {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0; }
+      flex-direction: column; }
 
-.search-form fieldset {
-  border: 0; }
+.error404 .content-area {
+  margin-bottom: 2rem; }
+  .error404 .content-area ul {
+    padding: 0;
+    line-height: 1.75; }
+  .error404 .content-area h2 {
+    font-family: Novecento Sans;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding-top: 20px; }
 
 /* Search Page */
 .search-whole-page {
