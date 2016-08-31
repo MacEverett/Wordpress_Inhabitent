@@ -269,20 +269,36 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center; }
-
-.product-block {
-  border: 1px solid #e1e1e1;
-  border-top-width: 5px;
-  width: 250px;
-  text-align: center;
-  margin: 10px;
-  padding: 20px 0; }
-  .product-block:hover {
-    border-color: #d99054; }
-  .product-block img {
-    height: 70px;
-    width: auto; }
+      justify-content: center;
+  -ms-flex: row nowrap;
+      flex: row nowrap;
+  -ms-flex-align: start;
+      align-items: flex-start; }
+  .shop-stuff .product-block {
+    color: #404040;
+    width: 23%;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin-right: 20px;
+    border-top-width: 5px;
+    line-height: 1.7; }
+    .shop-stuff .product-block:hover {
+      border-color: #d99054; }
+  .shop-stuff img {
+    width: 70px; }
+  .shop-stuff a {
+    color: white;
+    background-color: #248A83;
+    border: none;
+    padding: 10px 20px;
+    width: auto;
+    font-size: 14px;
+    font-family: Novecento Sans;
+    text-transform: uppercase; }
+    .shop-stuff a:hover {
+      border: none;
+      background-color: #19625d; }
 
 /* Journal Post */
 .journal-post {
@@ -1557,7 +1573,6 @@ input[type=submit] {
 .search-form fieldset {
   border: 0; }
 
-/* Search Page */
 .search-whole-page {
   display: -ms-flexbox;
   display: flex; }

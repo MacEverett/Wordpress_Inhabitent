@@ -22,23 +22,45 @@
 
 /* Shop Stuff */
 
+//Shop Stuff
 .shop-stuff {
-  display: flex;
-  justify-content: center;
-}
-.product-block {
-  border: 1px solid #e1e1e1;
-  border-top-width: 5px;
-  width: 250px;
-  text-align: center;
-  margin: 10px;
-  padding: 20px 0;
-  &:hover {
-    border-color:#d99054;
+  @include flex-display(center);
+  flex: row nowrap;
+  align-items: flex-start;
+  
+
+  .product-block {
+    color:$color__text-main;
+    width: 23%;
+    text-align: center;
+    border: $border__solid;
+    padding: 10px;
+    margin-right: 20px;
+    border-top-width: 5px;
+    line-height: 1.7;
+
+    &:hover{
+      border-color: $color__brand-orange;
+    }
   }
+
   img {
-    height: 70px;
+    width: 70px;
+  }
+
+  a {
+    color: white;
+    background-color: $color__brand;
+    border: none;
+    padding: 10px 20px;
     width: auto;
+    font-size: 14px;
+    @include font-uppercase;
+
+    &:hover{
+      border: none;
+      background-color: darken($color__brand, 10%);
+    }
   }
 }
 

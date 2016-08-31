@@ -16,6 +16,7 @@ get_header(); ?>
 				</section><!-- .home-hero -->
 
 				<!-- Shop Stuff -->
+			<div>
 				<main id="main" class="wrapper site-main" role="main">
 		   <section class="shop-stuff">
 		     <h1>Shop Stuff</h1>
@@ -26,7 +27,7 @@ get_header(); ?>
 		         'taxonomy' => 'product-type',
 		         'order' => 'ASC',
 		         'orderby' => 'name',
-		         'hide_empty' => true);
+		         'hide_empty' => true,);
 		         $shop_categories = get_terms($category_arr); ?>
 
 		         <?php foreach ( $shop_categories as $tag ): ?>
@@ -43,6 +44,7 @@ get_header(); ?>
 		           <?php endforeach; ?>
 		         </div>
 		       </section>
+				 </div>
 
 
 		<!-- Inhabitent Journal -->
