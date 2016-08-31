@@ -78,12 +78,12 @@ function inhabitent_scripts() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 	wp_enqueue_script( 'inhabitent-search-bar', get_template_directory_uri() . '/build/js/search-bar.min.js', array('jquery'), false, true );
-	/*if (is_front_page() || is_page_template( 'about.php' ) || is_singular( 'adventure' )) {
+	if (is_front_page() || is_page_template( 'about.php' ) || is_singular( 'adventure' )) {
 		wp_enqueue_script('inhabitent-sticky-header', get_template_directory_uri() . '/build/js/sticky-header.min.js', array('jquery'), false, true );
 	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	} */ 
+	}
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_scripts' );
 /**

@@ -795,7 +795,6 @@ html {
   box-sizing: inherit; }
 
 body {
-  width: 1120px;
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
@@ -1198,6 +1197,13 @@ a {
   display: table; }
 
 /*--------------------------------------------------------------
+--------------------------------------------------------------*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px; }
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
@@ -1209,6 +1215,22 @@ a {
 /* Search widget. */
 .widget_search .search-submit {
   display: none; }
+
+/* Widget area */
+.widget-area {
+  width: 27%;
+  padding-left: 5%;
+  padding-top: 3rem; }
+  .widget-area h2 {
+    color: #2f1339; }
+  .widget-area a {
+    color: #248a83; }
+    .widget-area a:hover {
+      color: #19625d; }
+    .widget-area a:visited {
+      color: #248a83; }
+      .widget-area a:visited:hover {
+        color: #19625d; }
 
 /* Contact Info */
 .textwidget p {
@@ -1512,26 +1534,28 @@ input[type=submit] {
     font-size: 2rem;
     color: #2f1339; }
 
-/*-----------------------------------------------------------
-# Error 404 Page
--------------------------------------------------------------*/
-.content-area {
+/* Error 404 Page */
+.error-whole-page {
+  display: -ms-flexbox;
+  display: flex; }
+
+.error-404 .error-content {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+  width: 73%; }
+  .error-404 .error-content a:visited {
+    color: #248a83; }
+    .error-404 .error-content a:visited:hover {
+      color: #2f1339; }
+  .error-404 .error-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0; }
 
-.error404 .content-area {
-  margin-bottom: 2rem; }
-  .error404 .content-area ul {
-    padding: 0;
-    line-height: 1.75; }
-  .error404 .content-area h2 {
-    font-family: Novecento Sans;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    padding-top: 20px; }
+.search-form fieldset {
+  border: 0; }
 
 /* Search Page */
 .search-whole-page {
@@ -1588,3 +1612,86 @@ input[type=submit] {
 
 .search .page-content {
   padding-top: 10px; }
+
+/* Find Us Page */
+.status-publish h1 {
+  font-size: 2.5rem; }
+
+.status-publish h2 {
+  color: #2f1339;
+  font-size: 2rem; }
+
+.wpcf7-form label {
+  text-transform: uppercase;
+  font-family: "novocento", sans-serif;
+  font-size: 1.1rem;
+  font-weight: normal; }
+
+.wpcf7-form .required {
+  color: #d99054;
+  font-size: 1.1rem; }
+
+.wpcf7-form .ajax-loader {
+  height: 20px;
+  width: 20px; }
+
+.wpcf7-form .wpcf7-submit {
+  font-size: .9rem;
+  padding: 8px 22.5px; }
+
+/* Single Adventure Page */
+.adventure-single .adventure-header .entry-title {
+  margin-bottom: 0; }
+
+.adventure-single .adventure-header h2 {
+  font-size: 2.3rem; }
+
+.adventure-single .adventure-header div {
+  text-align: left;
+  max-width: 800px; }
+
+.adventure-single .adventure-header span {
+  text-transform: uppercase;
+  font-family: "novocento", sans-serif;
+  font-size: 1.1rem; }
+
+.adventure-single .entry-content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.adventure-single .social-buttons button {
+  margin-top: 0;
+  margin-bottom: 50px; }
+
+/* Archive Adventure */
+.adventure-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 30px; }
+
+.adventure-grid-item {
+  position: relative;
+  max-width: 49%;
+  margin-left: 10px; }
+  .adventure-grid-item .adventure-image {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+    padding: 0;
+    margin-bottom: 10px; }
+  .adventure-grid-item img {
+    z-index: -1;
+    position: relative;
+    display: block; }
+  .adventure-grid-item .adventure-info {
+    position: absolute;
+    top: 0;
+    padding: 20px 20px; }
+    .adventure-grid-item .adventure-info h3 a {
+      color: white;
+      font-family: "merriweather", serif;
+      font-size: 2rem;
+      font-weight: normal; }
+      .adventure-grid-item .adventure-info h3 a:hover {
+        color: #f0e4d1; }

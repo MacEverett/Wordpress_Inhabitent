@@ -1,0 +1,67 @@
+/* Single Adventure Page */
+
+.adventure-single {
+  .adventure-header {
+    .entry-title {
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 2.3rem;
+    }
+    div {
+      text-align: left;
+      max-width: 800px;
+    }
+    span {
+      text-transform: uppercase;
+      font-family: $font__pre;
+      font-size: 1.1rem;
+    }
+  }
+  .entry-content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-buttons button {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+} // .adventure-single
+
+/* Archive Adventure */
+
+.adventure-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.adventure-grid-item {
+  position: relative;
+  max-width: 49%;
+  margin-left: 10px;
+  .adventure-image{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.25) 100%);
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  img {
+    z-index: -1;
+    position: relative;
+    display: block;
+  }
+  .adventure-info {
+    position: absolute;
+    top: 0;
+    padding: 20px 20px;
+    h3 a {
+      color: white;
+      font-family: $font__main;
+      font-size: 2rem;
+      font-weight: normal;
+      &:hover {
+        color: #f0e4d1;
+      }
+    }
+  }
+} // .adventure-grid-item

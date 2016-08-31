@@ -40,7 +40,7 @@ function inhabitent_register_product_type_tax() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => false,
 	);
-	register_taxonomy( 'product-type', array( 'products' ), $args );
+	register_taxonomy( 'product-type', array( 'product' ), $args );
 
 }
 add_action( 'init', 'inhabitent_register_product_type_tax', 0 );

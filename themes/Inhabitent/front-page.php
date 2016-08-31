@@ -23,7 +23,7 @@ get_header(); ?>
 
 		       <?php
 		       $category_arr = array(
-		         'taxonomy' => 'product-types',
+		         'taxonomy' => 'product-type',
 		         'order' => 'ASC',
 		         'orderby' => 'name',
 		         'hide_empty' => true);
@@ -31,12 +31,12 @@ get_header(); ?>
 
 		         <?php foreach ( $shop_categories as $tag ): ?>
 		           <div class="each-category">
-		             <img src="<?php echo get_template_directory_uri().'/images/logos'.$tag->slug.'.svg'; ?>" alt = " "/>
+		             <img src="<?php echo get_template_directory_uri().'/images/logos/'.$tag->slug.'.svg'; ?>" alt = " "/>
 
 		             <p><?php echo $tag->description; ?></p>
 		             <div class="stuff">
 		               <a href="<?php echo get_category_link($tag); ?>">
-		                 <?php echo $tag->name.' stuff'; ?></a>
+		                 <?php echo $tag->name.' STUFF'; ?></a>
 		               </div>
 		             </div>
 

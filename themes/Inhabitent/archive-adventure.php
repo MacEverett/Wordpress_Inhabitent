@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive product pages.
+ * The template for displaying archive products pages.
  *
  * @package inhabitent_Theme
  */
@@ -17,24 +17,23 @@ get_header(); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-
-				<ul class="product-links">
-					<?php $terms = get_terms('product-type')?>
-						<?php foreach ( $terms as $product_type) : ?>
-							<li>
-								<a href="<?php echo get_term_link($product_type, 'product-type') ?>/"><?php echo $product_type->slug ?></a>
-							</li>
-					<?php endforeach; ?>
-				</ul>
 			</header><!-- .product-header -->
 
-			<div class="product-grid">
-					<?php /* Start the Loop */ ?>
+			<div class="adventure-grid">
 					<?php while ( have_posts() ) : the_post(); ?>
+						<div class="adventure-grid-item">
 
-						<?php
-							get_template_part( 'template-parts/content', 'product' );
-						?>
+								<div class="adventure-image">
+										<?php the_post_thumbnail( 'full' ); ?>
+								</div>
+
+							<div class="adventure-info">
+
+								<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title( sprintf( '<h2 class="product-title"></h2>' )); ?></a></h3>
+								<a href="<?php the_permalink(); ?>" class="readtag">Read More</a>
+
+							</div> <!-- .adventure-info -->
+						</div><!-- .adventure-grid-item -->
 
 					<?php endwhile; ?>
 
@@ -44,9 +43,10 @@ get_header(); ?>
 
 				<?php endif; ?>
 
-			</div><!-- .product-grid-item -->
+			</div><!-- .adventure-grid -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div><!-- .page-content -->
+</div><!-- .product-content -->
 
 <?php get_footer(); ?>

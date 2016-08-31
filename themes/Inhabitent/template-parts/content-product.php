@@ -21,4 +21,3 @@
 			</div> <!-- .product-info -->
 
 		</div><!-- .product-grid-item -->
-Contact GitHub API Training Shop Blog About

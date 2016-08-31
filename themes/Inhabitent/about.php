@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Template Name: About page
@@ -29,4 +28,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .about-content -->
+
 <?php get_footer(); ?>

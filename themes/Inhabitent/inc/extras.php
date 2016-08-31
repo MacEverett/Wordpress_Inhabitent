@@ -18,7 +18,8 @@ function inhabitent_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'inhabitent_body_classes' );
-
+///// My Functions /////
+//// Removes editor in the CMS in WP ////
 function inhabitent_remove_submenus() {
     remove_submenu_page( 'themes.php', 'theme-editor.php' );
     remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
@@ -26,7 +27,7 @@ function inhabitent_remove_submenus() {
 add_action( 'admin_init', 'inhabitent_remove_submenus', 102 );
 //// Customizing Login Page ////
 function inhabitent_custom_login() {
-	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory')  . '/customlogin.css" />';
+	echo '<link rel="stylesheet" type="text/css" href="' . get_stylesheet_directory_uri('stylesheet_directory')  . '/customlogin.css" />';
 }
 add_action('login_head', 'inhabitent_custom_login');
 function inhabitent_url( $url ) {
@@ -53,12 +54,13 @@ background-size: cover, cover;
 				wp_add_inline_style( 'inhabitent-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'about_header_styles_method' );
-//// Function for reordering and including 16 products on Product Page ////
-function inhabitent_filter_product_query( $query ) {
-	if (is_post_type_archive( 'product' ) || is_tax( 'product_type' ) && !is_admin() && $query->is_main_query() ) {
-		$query->set( 'orderyby', 'title' );
-		$query->set( 'order', 'ASC' );
-		$query->set( 'posts_per_page', 16 );
-	}
+
+//Adjusting archive page loop for products
+function inhabitent_modify_product_archive($query){
+  if(is_post_type_archive('product') && !is_admin() && $query->is_main_query()){
+    $query->set('posts_per_page', 16);
+    $query->set('order', 'ASC');
+    $query->set('orderby', 'title');
+  }
 }
-add_action ('pre_get_posts', 'inhabitent_filter_product_query');
+add_action('pre_get_posts', 'inhabitent_modify_product_archive');

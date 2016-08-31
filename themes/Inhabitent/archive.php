@@ -4,8 +4,8 @@
  *
  * @package inhabitent_Theme
  */
-
 get_header(); ?>
+<div class="page-content">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -39,5 +39,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
+</div><!-- .page-content -->
+
 <?php get_footer(); ?>

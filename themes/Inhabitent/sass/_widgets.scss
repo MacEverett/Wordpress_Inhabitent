@@ -15,6 +15,28 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+/* Widget area */
+.widget-area {
+	width: 27%;
+	padding-left: 5%;
+	padding-top: 3rem;
+	h2 {
+		color: #2f1339;
+	}
+	a {
+		color: $color__link;
+		&:hover {
+			color: $color__link-hover;
+		}
+		&:visited {
+			color: $color__link;
+			&:hover {
+				color: $color__link-hover;
+			}
+		}
+	}
+}
 /* Contact Info */
 .textwidget {
 	p {
