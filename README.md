@@ -6,4 +6,4 @@ In this project we built out a custom wordpress theme for our site Inhabitent. A
 Tasks Completed Use the CMS Wordpress to built out a multipage website using a custome starter theme becoming familiar with WP pages, posts, plugins using custom field suite to include metadata build out custom widgets. Coming Back to this project I had a better plan of attack and understanding of what needed to be done. I was able to add the sliding search bar, all my shop items and pages. I spent a lot of time trying to re flex most of my pages, and make the containers perfect size for the page. My plan of attack next time would be to set more variables and mixins for future css projects. I found this project extremley difficult, but Im very proud with the progress and steps Ive made with wordpress and php 
 
 
-<img src="http://i.imgur.com/Wb57rRG.png>
+<img src="http://i.imgur.com/Wb57rRG.png">
